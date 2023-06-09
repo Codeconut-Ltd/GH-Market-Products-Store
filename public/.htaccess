@@ -1,0 +1,193 @@
+# Custom setting
+# - Domain under 'Content-Security-Policy'
+#
+# @see <https://webhint.io> : Setting details
+##
+
+# Live ENV has different IP
+SetEnvIf Remote_Addr 127\.0\.0\.1 DEVELOPMENT
+
+Options -Indexes
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- Security
+
+##
+# Files
+##
+
+<FilesMatch "^.*(.*error.?log|\.[hH][tT][aApP].*)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+##
+# Headers
+##
+
+<IfModule mod_headers.c>
+    # General
+    Header set X-XSS-Protection "1; mode=block"
+     Header set X-Content-Type-Options nosniff
+
+    # CORS restriction handling
+    # Example: Header set Access-Control-Allow-Origin: https://SUBDOMAIN.EXAMPLE.COM
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Credentials true
+
+    # @todo WIP - Adjust per server (CO = ok)
+    Header set Access-Control-Allow-Methods GET, POST, OPTIONS
+    Header set Access-Control-Allow-Headers Accept, Content-Type, Origin, X-Requested-With, Authorization
+
+    # If needed: sync-xhr; sync-script / Check API support:: document.featurePolicy.allowedFeatures()
+    # Header always set Feature-Policy "camera none; geolocation none; gyroscope none; magnetometer none; microphone none; payment none;"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Tip: Increase step by step until (current value = 1 hour)
+    # Header always set Strict-Transport-Security "max-age=3600; includeSubDomains; preload"
+
+    # If needed: Change DEV domain to own hosting environment requirements
+    # Header always append Content-Security-Policy "frame-ancestors https://SUBDOMAIN.EXAMPLE.COM;"
+    # Header always append Content-Security-Policy "frame-ancestors https://...;"
+    Header always set Content-Security-Policy "default-src http: https:; img-src http: https: data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net"
+
+    <FilesMatch "\.(svgz?)$">
+        Header set Content-Security-Policy "default-src 'none'; frame-ancestors 'none'; style-src 'self' 'unsafe-inline'"
+    </FilesMatch>
+
+    # Workaround: `mod_headers` cannot match based on content-type
+    # https://webhint.io/docs/user-guide/hints/hint-no-html-only-headers
+    <FilesMatch "\.(appcache|css|eot|gif|ico|jpe?g|m?js|json(ld)?|manifest|map|markdown|md|otf|pdf|png|rss|svgz?|ttf|txt|vcard|vcf|web[mp]|webmanifest|woff2?)$">
+        Header always unset Content-Security-Policy
+        Header always unset Feature-Policy
+        Header always unset X-XSS-Protection
+        Header always unset X-UA-Compatible
+        Header always unset X-WebKit-CSP
+    </FilesMatch>
+</IfModule>
+
+##
+# Cookies
+##
+
+<FilesMatch "\.(css|js|CSS|JS)$">
+    <IfModule mod_headers.c>
+         Header unset Set-Cookie
+    </IfModule>
+</FilesMatch>
+
+
+# ------------------------------------------------------------------------------------------------------------------------------ Performance
+
+##
+# Caches
+##
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    ExpiresDefault  "access plus 1 week"
+    ExpiresByType   application/json "access plus 0 seconds"
+    ExpiresByType   text/html        "access plus 0 seconds"
+
+    <IfModule mod_headers.c>
+        # Workaround: `mod_headers` cannot match based on content-type
+        # https://webhint.io/docs/user-guide/hints/hint-http-cache
+        Header merge Cache-Control immutable
+        <FilesMatch "\.(appcache|cur|geojson|ico|json(ld)?|x?html?|topojson|xml)$">
+            Header edit Cache-Control immutable ""
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+##
+# Caches
+##
+
+<FilesMatch "\.(css|htm|html|ico|jpe?g|js|png|pdf|txt)$">
+    <IfModule mod_expires.c>
+        ExpiresActive Off
+    </IfModule>
+    <IfModule mod_headers.c>
+        FileETag None
+        Header unset ETag
+        Header unset Cache-Control
+        Header unset Last-Modified
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    </IfModule>
+</FilesMatch>
+
+##
+# Compression
+##
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE application/javascript application/pdf text/javascript application/json image/svg+xml image/x-icon text/css text/html text/plain video/webm
+    <IfModule mod_mime.c>
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------- Content
+
+##
+# Types + Charsets
+##
+
+AddDefaultCharset utf-8
+
+<IfModule mod_mime.c>
+    AddType text/javascript  js
+    AddType application/json json
+    AddType application/json map
+    AddType image/webp       webp
+
+    AddCharset utf-8 .json \
+                     .css \
+                     .js
+</IfModule>
+
+##
+# SEO
+##
+
+<IfModule mod_headers.c>
+    # Disable indexing
+    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+</IfModule>
+
+
+# ----------------------------------------------------------------------------------------------------------------------------------- Access
+
+# Live ENV - Secure PHP API access
+# @todo - WIP - Adjust file path
+# <Files "index.php">
+#     AuthUserFile /home/.../public_html/.../api/.htpasswd
+#     AuthName "Restricted area"
+#     AuthType Basic
+#     Require valid-user
+#
+#     Order Allow,Deny
+#     Allow from env=DEVELOPMENT
+#     Satisfy any
+# </Files>
+
+
+# -------------------------------------------------------------------------------------------------------------------------------- Redirects
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Enforce HTTPS
+    # RewriteCond %{REMOTE_ADDR} !^127.0.0.1$ [NC]
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+    # Rewrites
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+</IfModule>

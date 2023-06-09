@@ -1,0 +1,35 @@
+# Compiled output
+/build
+/dist
+/documentation
+/out-tsc
+/tmp
+
+# Dependencies
+/node_modules
+package-lock.json
+yarn-lock.json
+
+# IDEs + Editors
+*.launch
+*.sublime-workspace
+.idea
+.c9
+.classpath
+.history
+.project
+.settings
+
+# IDE - VSCode
+.vscode/
+
+# Misc
+/.sass-cache
+npm-debug.log*
+yarn.lock
+yarn-debug.log*
+yarn-error.log
+
+# Server files
+.htaccess
+.htpasswd

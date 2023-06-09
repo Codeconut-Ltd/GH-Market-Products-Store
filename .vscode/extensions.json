@@ -1,0 +1,29 @@
+{
+  "recommendations": [
+    "alefragnani.bookmarks",
+    "bmewburn.vscode-intelephense-client",
+    "calebporzio.better-phpunit",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "github.copilot",
+    "huizhou.githd",
+    "ikappas.phpcs",
+    "davidanson.vscode-markdownlint",
+    "mehedidracula.php-namespace-resolver",
+    "mhutchie.git-graph",
+    "mikestead.dotenv",
+    "mkaufman.htmlhint",
+    "mrmlnc.vscode-scss",
+    "ofhumanbondage.react-proptypes-intellisense",
+    "styled-components.vscode-styled-components",
+    "stylelint.vscode-stylelint",
+    "valeryanm.vscode-phpsab",
+    "webhint.vscode-webhint",
+    "zignd.html-css-class-completion"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    "sonarjs"
+  ],
+  "extends": [
+    "react-app",
+    "eslint-config-prettier",
+    "plugin:sonarjs/recommended"
+  ],
+  "rules": {
+    "max-len": [
+      "warn",
+      {
+        "code": 140
+      }
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "bottleDecoration": {
+    "name": "Flaschen Deko",
+    "active": true,
+    "sortId": 0,
+    "price": 3.0,
+    "priceTier": [
+      { "count": 1, "price": 3.0 },
+      { "count": 4, "price": 2.5 }
+    ],
+    "productList": {
+      "allesGute": { "name": "Alles Gute" },
+      "cheers": { "name": "Cheers" },
+      "endlich18": { "name": "Endlich 18" },
+      "froheOstern": { "name": "Frohe Ostern" },
+      "froheWeihnachten": { "name": "Frohe Weihnachten" },
+      "froheWeihnachtenMitSternen": { "name": "Frohe Weihnachten (mit Sternen)" },
+      "frohesNeuesJahr": { "name": "Frohes neues Jahr" },
+      "happyBirthday": { "name": "Happy Birthday" },
+      "vielenDank": { "name": "Vielen Dank" },
+      "weinglaeser": { "name": "Weingläser" }
+    }
+  },
+  "ledKerze": {
+    "name": "LED-Kerze",
+    "active": true,
+    "sortId": 1,
+    "price": 10.0,
+    "priceTier": [{ "count": 1, "price": 10.0 }],
+    "productList": {
+      "bordeaux": { "name": "Bordeaux" },
+      "honig": { "name": "Honig" },
+      "weiss": { "name": "Weiß" },
+      "pink": { "name": "Pink" }
+    }
+  },
+  "lesezeichen": {
+    "name": "Lesezeichen",
+    "active": true,
+    "sortId": 2,
+    "price": 6.0,
+    "priceTier": [
+      { "count": 1, "price": 6.0 },
+      { "count": 2, "price": 5.0 }
+    ],
+    "productList": {
+      "lesezeichenRelief": { "name": "Lesezeichen-Relief" },
+      "lesezeichenKreise": { "name": "Lesezeichen-Kreise" },
+      "pause": { "name": "Pause" }
+    }
+  },
+  "lesezeichenPersonalisiert": {
+    "name": "Lesezeichen (personalisiert)",
+    "active": true,
+    "sortId": 3,
+    "price": 8.0,
+    "priceTier": [{ "count": 1, "price": 8.0 }],
+    "productList": {
+      "formEckig": { "name": "Form Eckig" },
+      "FormHerz": { "name": "Form Rund" },
+      "formRund": { "name": "Form Herz" }
+    }
+  },
+  "osterei": {
+    "name": "Osterei",
+    "active": true,
+    "sortId": 4,
+    "price": 2.0,
+    "priceTier": [
+      { "count": 1, "price": 2.0 },
+      { "count": 7, "price": 1.4285 }
+    ],
+    "productList": {
+      "blumen1": { "name": "Blumen 1" },
+      "punkte1": { "name": "Punkte 1 (Viereck)" },
+      "punkte2": { "name": "Punkte 2 (Hexagon)" },
+      "zickzack1": { "name": "ZickZack 1" },
+      "zickzack2": { "name": "ZickZack 2 (mit Strich)" }
+    }
+  },
+  "ostereiPersonalisiert": {
+    "name": "Osterei (personalisiert)",
+    "active": true,
+    "sortId": 5,
+    "price": 4.0,
+    "priceTier": [{ "count": 1, "price": 4.0 }],
+    "productList": {
+      "blumen1": { "name": "Blumen 1 (personalisiert)" },
+      "buchstabe1": { "name": "Buchstabe 1 (personalisiert)" }
+    }
+  },
+  "osterhaseFensterbild": {
+    "name": "Osterhase (Fensterbild)",
+    "active": true,
+    "sortId": 6,
+    "price": 8.0,
+    "priceTier": [{ "count": 1, "price": 8.0 }],
+    "productList": {
+      "osterhase": { "name": "Osterhase" }
+    }
+  },
+  "pflanzenschild": {
+    "name": "Pflanzenschild",
+    "active": true,
+    "sortId": 7,
+    "price": 3.0,
+    "priceTier": [
+      { "count": 1, "price": 3.0 },
+      { "count": 4, "price": 2.5 }
+    ],
+    "productList": {
+      "basilikum": { "name": "Basilikum" },
+      "dill": { "name": "Dill" },
+      "estragon": { "name": "Estragon" },
+      "grueneMinze": { "name": "Grüne Minze" },
+      "koriander": { "name": "Koriander" },
+      "kresse": { "name": "Kresse" },
+      "lavendel": { "name": "Lavendel" },
+      "majoran": { "name": "Majoran" },
+      "minze": { "name": "Minze" },
+      "oregano": { "name": "Oregano" },
+      "petersilie": { "name": "Petersilie" },
+      "pfefferminze": { "name": "Pfefferminze" },
+      "rosmarin": { "name": "Rosmarin" },
+      "salbei": { "name": "Salbei" },
+      "schnittlauch": { "name": "Schnittlauch" },
+      "thaiBasilikum": { "name": "Thai Basilikum" },
+      "thymian": { "name": "Thymian" }
+    }
+  },
+  "schmetterling": {
+    "name": "Schmetterling",
+    "active": true,
+    "sortId": 8,
+    "price": 2.5,
+    "priceTier": [
+      { "count": 1, "price": 2.5 },
+      { "count": 5, "price": 2.0 }
+    ],
+    "productList": {
+      "schmetterling1": { "name": "Schmetterling 1" },
+      "schmetterling2": { "name": "Schmetterling 2" },
+      "schmetterling3": { "name": "Schmetterling 3" },
+      "schmetterling4": { "name": "Schmetterling 4" },
+      "schmetterling5": { "name": "Schmetterling 5" },
+      "schmetterling6": { "name": "Schmetterling 6" },
+      "schmetterling7": { "name": "Schmetterling 7" }
+    }
+  },
+  "schriftAufstellerGross": {
+    "name": "Schrift-Aufsteller (groß)",
+    "active": true,
+    "sortId": 9,
+    "price": 10.0,
+    "priceTier": [{ "count": 1, "price": 10.0 }],
+    "productList": {
+      "happyBirthday": { "name": "Happy Birthday" },
+      "hoHoHo": { "name": "HoHoHo" },
+      "homeoffice": { "name": "Homeoffice" },
+      "sternekueche": { "name": "Sterneküche" },
+      "weihnachtszeit": { "name": "Weihnachtszeit" }
+    }
+  },
+  "schriftAufstellerKlein": {
+    "name": "Schrift-Aufsteller (klein)",
+    "active": true,
+    "sortId": 10,
+    "price": 5.0,
+    "priceTier": [{ "count": 1, "price": 5.0 }],
+    "productList": {
+      "advent": { "name": "Advent" },
+      "xMas": { "name": "X-Mas" }
+    }
+  },
+  "teeTier": {
+    "name": "Tee-Tier",
+    "active": true,
+    "sortId": 11,
+    "price": 10.0,
+    "priceTier": [{ "count": 1, "price": 10.0 }],
+    "productList": {
+      "elch": { "name": "Elch" },
+      "elefant": { "name": "Elefant" },
+      "esel": { "name": "Esel" },
+      "rentier": { "name": "Rentier" }
+    }
+  },
+  "dekoLichtGross": {
+    "name": "Dekolicht gross",
+    "active": true,
+    "sortId": 12,
+    "price": 35.0,
+    "priceTier": [{ "count": 1, "price": 35.0 }],
+    "productList": {
+      "abstractCubes": { "name": "Abstract Cubes" },
+      "brassBand": { "name": "Brass Band" },
+      "circles": { "name": "Circles" },
+      "glowing": { "name": "Glowing" }
+    }
+  },
+  "dekoLichtKlein": {
+    "name": "Dekolicht klein",
+    "active": true,
+    "sortId": 13,
+    "price": 25.0,
+    "priceTier": [{ "count": 1, "price": 25.0 }],
+    "productList": {
+      "keltic": { "name": "Celtic" },
+      "infinity": { "name": "Infinity" },
+      "risingShapes": { "name": "Rising shapes" }
+    }
+  },
+  "dekoLichtKleinChord": {
+    "name": "Dekolicht klein Cord",
+    "active": true,
+    "sortId": 14,
+    "price": 30.0,
+    "priceTier": [{ "count": 1, "price": 30.0 }],
+    "productList": {
+      "blue": { "name": "Blue" },
+      "green": { "name": "Green" },
+      "red": { "name": "Red" },
+      "white": { "name": "White" }
+    }
+  },
+  "dekoLichtXL": {
+    "name": "Dekolicht XL",
+    "active": true,
+    "sortId": 15,
+    "price": 80.0,
+    "priceTier": [{ "count": 1, "price": 80.0 }],
+    "productList": {
+      "music": { "name": "Music" },
+      "triangles": { "name": "Triangles" }
+    }
+  },
+  "weihnachtskugel": {
+    "name": "Weihnachtskugel",
+    "active": true,
+    "sortId": 16,
+    "price": 2.0,
+    "priceTier": [
+      { "count": 1, "price": 2.0 },
+      { "count": 7, "price": 1.4285 }
+    ],
+    "productList": {
+      "glocke": { "name": "Glocke" },
+      "herz": { "name": "Herz" },
+      "schneeflocke": { "name": "Sachneeflocke" },
+      "schlitten": { "name": "Schlitten" },
+      "schneemann": { "name": "Schneemann" },
+      "stern": { "name": "Stern" },
+      "tannenbaum": { "name": "Tannenbaum" },
+      "zuckerstange": { "name": "Zuckerstange" }
+    }
+  }
+}

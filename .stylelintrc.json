@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
+  "ignoreFiles": ["build/**/*.css"],
+  "rules": {
+    "color-named": "never",
+    "font-family-name-quotes": "always-where-recommended",
+    "max-empty-lines": 2,
+    "max-nesting-depth": 3,
+    "no-empty-source": null,
+    "selector-class-pattern": null
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit --testdox --colors=auto",
+    "test:group": "phpunit --testdox --colors=auto --group",
+    "test:coverage": "phpunit --coverage-clover clover.xml",
+    "checkfix": [
+      "@cs-check",
+      "@cs-fix"
+    ]
+  },
+  "require": {
+    "symfony/dotenv": "5.4"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "0.7.1",
+    "kint-php/kint": "4.1",
+    "opsway/psr12-strict-coding-standard": "0.7.0",
+    "phpunit/phpunit": "9.5",
+    "zalas/phpunit-globals": "2.2",
+    "squizlabs/php_codesniffer": "3.6"
+  }
+}

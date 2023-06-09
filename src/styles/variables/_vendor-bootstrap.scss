@@ -1,0 +1,57 @@
+/**
+ * TOC
+ * - Animations
+ * - Colors
+ * - Grid
+ */
+
+@use "sass:color";
+
+// Animations
+
+$transition-collapse: height 0.2s ease;
+$transition-collapse-width: width 0.2s ease;
+
+// Colors
+
+$primary: color.adjust($gh-ci-primary, $lightness: 25%);
+$info: color.adjust($gh-ci-primary, $lightness: 25%, $hue: + 10);
+
+// Grid
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 2000px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1920px,
+);
+
+// For m|p-* utility classes
+// Linear progression except largest step
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 1,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 3.5,
+  9: $spacer * 4,
+  10: $spacer * 4.5,
+  20: $spacer * 10,
+);
