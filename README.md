@@ -2,10 +2,20 @@
 
 TOC
 
+- [About](#about)
 - [Use](#use)
 - [Documentation](#documentation)
 - [Testing](#testing)
 - [Issues](#issues)
+
+---
+
+## About
+
+This proof-of-concept app is created for a friend to use as aid when selling decorative products on markets. The application is run on a smartphone and can track sales and incomes per day, instead of having to manually note these.
+
+> This is the tech and skill demo version withour real application data like products.
+> Early, conceptual MVP phase with some features to be refined and finished on demand.
 
 ---
 
@@ -30,8 +40,9 @@ npm install
 ### PHP + Database
 
 - Install a PHP server and database that can run the API's PHP code
-  - Adjust credentials under `public/api/config`
-  - Initialize the database with SQL from `_internals/SQL/*.sql`
+  - Copy credentials template from `_internals`
+  - Adjust path to credentials under `public/api/index`
+  - Initialize the database with SQL from `_internals/sql/*.sql`
 - Run the build and upload the `build` folder
   - Build contains the API that needs PHP and SQL to run
 

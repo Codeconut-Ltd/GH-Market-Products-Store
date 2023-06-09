@@ -5,7 +5,7 @@
 /public/api/config/access.php
 
 # Compiled output
-# /build
+/build
 /dist
 /documentation
 /out-tsc
