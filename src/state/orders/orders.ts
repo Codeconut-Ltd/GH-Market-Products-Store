@@ -6,7 +6,6 @@ import getOrders from "state/orders/queries/get-orders"
  *
  * Initial state: None until query has completed.
  *
- * @todo WIP - Remove debug
  * @todo Optimize - Type safety
  */
 const ordersState = selector({
