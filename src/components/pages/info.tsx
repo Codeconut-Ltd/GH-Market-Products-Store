@@ -27,8 +27,8 @@ const PageInfo = (): any => {
           present at markets in favourable times only, and otherwise investing time in higher yield work to be done.
         </p>
         <p>
-          It's in a early, conceptual MVP phase. Primary goals are to maximize UI interaction speed and implement custom price modelling for
-          custom offers or discounts. This version of the application is anonymized and intended as technical/ skill demonstration.
+          It's in an early, conceptual MVP phase. Primary goals are to maximize UI interaction speed and implement custom price modelling
+          for custom offers or discounts. This version of the application is anonymized and intended as technical/ skill demonstration.
         </p>
         <br />
         <h2 className="mb-5">Tech stack</h2>
@@ -53,9 +53,9 @@ const PageInfo = (): any => {
         </ul>
         <h2 className="my-5">Author</h2>
         <p className="mb-5">
-          © 2023 Christian Oellers –{" "}
-          <a href="https://www.codeconut.io/" target="_blank" rel="noopener noreferrer">
-            Codeconut Ltd.
+          © 2023 Christian Oellers –{" "}
+          <a href="https://github.com/Codeconut-Ltd" target="_blank" rel="noopener noreferrer">
+            Codeconut Ltd. @ GitHub
           </a>
         </p>
       </Main>
