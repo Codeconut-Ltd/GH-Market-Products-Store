@@ -22,7 +22,9 @@ TOC
 
 Proof of concept mobile web-app for market product sales tracking.
 
-Registers actual products being sold, as well as the time (stored in the DB). This information is crucial for sellers to figure out the best times at a market vs. those times that could be spent better doing something else.
+Registers actual products being sold, as well as the time (stored in the DB). 
+This information is crucial for sellers to figure out the best times at a market vs. 
+those times that could be spent better doing something else.
 
 > This is the tech and skill demo version withour real application data like products.
 > Early, conceptual MVP phase with some features to be refined and finished on demand.
