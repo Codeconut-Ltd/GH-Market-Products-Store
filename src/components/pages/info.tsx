@@ -23,11 +23,12 @@ const PageInfo = (): any => {
         <h1 className="mb-5">Live demo</h1>
         <p>
           This proof-of-concept app is created for a friend to use as aid when selling decorative products on markets. The application is
-          run on a smartphone and can track sales and incomes per day, instead of having to manually note these.
+          run on a smartphone and can track sales, incomes and most important; the time of sale. This helps to optimize costs of being
+          present at markets in favourable times only, and otherwise investing time in higher yield work to be done.
         </p>
         <p>
-          It's in a early, conceptual MVP phase, with the goal to optimize the maximize UI interaction speed and add custom price modelling,
-          to be able to craft custom offers. This version of the application is anonymized and intended as technical/ skill demonstration.
+          It's in a early, conceptual MVP phase. Primary goals are to maximize UI interaction speed and implement custom price modelling for
+          custom offers or discounts. This version of the application is anonymized and intended as technical/ skill demonstration.
         </p>
         <br />
         <h2 className="mb-5">Tech stack</h2>

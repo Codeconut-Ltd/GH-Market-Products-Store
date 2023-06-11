@@ -20,7 +20,9 @@ TOC
 
 ## About
 
-This proof-of-concept app is created for a friend to use as aid when selling decorative products on markets. The application is run on a smartphone and can track sales and incomes per day, instead of having to manually note these.
+Proof of concept mobile web-app for market product sales tracking.
+
+Registers actual products being sold, as well as the time (stored in the DB). This information is crucial for sellers to figure out the best times at a market vs. those times that could be spent better doing something else.
 
 > This is the tech and skill demo version withour real application data like products.
 > Early, conceptual MVP phase with some features to be refined and finished on demand.
