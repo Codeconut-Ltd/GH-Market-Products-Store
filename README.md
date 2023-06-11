@@ -1,3 +1,5 @@
+![Market Products Store](teaser.png)
+
 # Product register
 
 TOC
@@ -8,7 +10,13 @@ TOC
 - [Testing](#testing)
 - [Issues](#issues)
 
+<br>
+
 ---
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Codeconut-Ltd_GH-Market-Products-Store&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Codeconut-Ltd_GH-Market-Products-Store)
+
+<br><br>
 
 ## About
 
